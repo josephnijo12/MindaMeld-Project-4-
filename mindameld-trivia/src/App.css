@@ -1,0 +1,12 @@
+body {
+  /* background-image: url("https://i.imgur.com/idYvw24.jpg"); */
+background-color: rgb(249, 240, 227);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.form {
+  padding-top: 50px;
+}

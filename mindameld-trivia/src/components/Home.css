@@ -1,0 +1,21 @@
+.intro {
+  padding-top: 100px;
+}
+
+.intro h1 {
+  font-size: 60px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 540px) {
+  .intro h1 {
+    font-size: 100px;
+  }
+}
+
+.intro p {
+  font-size: 20px;
+}
