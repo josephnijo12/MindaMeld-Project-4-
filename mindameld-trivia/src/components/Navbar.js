@@ -1,20 +1,44 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
-// import Logo from "../../public/images/logo.png";
-function Navbar() {
+import logo from "../logo.png";
+
+function Navbar({ loggedInUser, setLoggedInUser }) {
+  const navigate = useNavigate();
+
+  const playButton = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const data = Object.fromEntries(new FormData(form));
+    setLoggedInUser(data.username);
+    navigate("/dashboard");
+  };
+
   return (
-    <nav className="navbar bg-light">
+    <nav className="  navbar " style={{ background: "rgba(0,0,0,0.7)" }}>
       <div className="container-fluid">
-        <div className="navbar-brand">
-          <img src="../../public/images/icon2.jpeg" alt="MINDAMELD TRIVIA" />
+        <div className="navbar-logo">
+          <img src={logo} alt="Logo" width="50px" />
+          <span style={{ margin: "0px 20px", color: "#ddd" }}>
+            MINDAMELD-TRIVIA
+          </span>
+          {loggedInUser && (
+            <span className="navbar-welcome" style={{ color: "#fff099" }}>
+              {`Welcome, `}
+              {loggedInUser}
+            </span>
+          )}
         </div>
         <div className="d-flex">
-          <div className=" d-flex">
-            <input type="text" placeholder="Enter Name" />
-            <Link className="btn btn-success" to={""}>
-              Play
-            </Link>
-          </div>
+          {!loggedInUser && (
+            <div className=" d-flex">
+              <form onSubmit={playButton} className="d-flex">
+                <input type="text" name="username" required />
+                <button className="btn btn-success" type="submit">
+                  Enter Name
+                </button>
+              </form>
+            </div>
+          )}
         </div>
       </div>
     </nav>

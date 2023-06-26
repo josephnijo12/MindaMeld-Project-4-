@@ -1,0 +1,29 @@
+.option-div{
+    margin-top: 5%;
+}
+.option{
+    border: 1px white solid;
+    display: inline-block;
+    font-size: larger;
+    padding: 1%;
+    /* white-space: nowrap; */
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 4%;
+    
+}
+.option:hover{
+    background-color: rgb(240, 195, 48);
+}
+.question{
+    margin-top: 6%;
+}
+.question h5{
+    font-size:x-large;
+}
+.score{
+    /* border: 1px white solid; */
+    margin-bottom: 7%;
+}

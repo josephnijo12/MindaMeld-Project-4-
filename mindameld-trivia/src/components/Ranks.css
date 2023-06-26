@@ -1,0 +1,24 @@
+.no-border{
+    border: 0px;
+    background: #fff099;
+
+}
+.no-bold{
+    font-weight: 100;
+}
+.no-border span{
+    background-color: rgb(240, 195, 48);
+    color: rgb(85, 85, 71);
+    width: 10%;
+}
+.rank-title{
+    width: 20%;
+    float: left;
+    
+    font-weight: bold;
+}
+.rank-title2{
+
+    float: right;
+
+}

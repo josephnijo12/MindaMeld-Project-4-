@@ -1,21 +1,15 @@
-import { useNavigate, Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import "./Home.css";
 
-function Home() {
-  const navigate = useNavigate();
-
+function Home({ loggedInUser, setLoggedInUser }) {
   return (
     <div>
-      <Navbar />
-      <div className="container intro">
+      <Navbar loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} />
+      <div className="container-fluid intro">
         <h1>
-          It's time to <br /> Questionnaire
+          It's time to <br /> questionnaire
         </h1>
-        <p>Play to test your knowledge!</p>
-        <Link className="btn btn-lg btn-success" to={""}>
-          Play
-        </Link>
+        <h4>Test your knowledge!{loggedInUser}</h4>
       </div>
     </div>
   );
