@@ -42,37 +42,49 @@ export default function Questions({
   const handleAnswer = (selectedOption, event) => {
     if (selectedOption === quizData.correct_answer) {
       setScore((score) => score + 10);
-      console.log("Correct answer!");
-    } else {
-      console.log("Incorrect answer!");
     }
     if (count === 24) {
       event.target.style.backgroundColor = "#F0C330";
       setIsClickable(false);
-
-      console.log(document.getElementsByClassName("option")[0]);
     } else {
       setCount((count) => count + 1);
     }
   };
 
   const handleSubmission = async () => {
-    let sendData = { score: score, name: loggedInUser };
-    fetch("http://localhost:5000/storedata", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(sendData),
-    })
-      .then((res) => {})
-      .catch((err) => {});
+    // let sendData = { score: score, name: loggedInUser };
+    // fetch("http://localhost:5001/storedata", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(sendData),
+    // })
+    //   .then((res) => {
+    //     console.log(res.json().data);
+    //     // First request completed, introduce a small delay before making the second request
+    //     return new Promise((resolve) => setTimeout(resolve, 500));
+    //   })
+    //   .then(() => {
+    //     return fetch("http://localhost:5001/getdata");
+    //   })
+    //   .then((url) => url.json())
+    //   .then((fetchRanks) => {
+    //     console.log("promise resolved");
+    //     setRanks(fetchRanks);
+    //     setQuestions(null);
+    //     setLoggedInUser(loggedInUser);
+    //     navigate("/dashboard");
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
 
-    const url = await fetch("http://localhost:5000/getdata");
-    const fetchRanks = await url.json();
-    setRanks(fetchRanks);
-
+    // const url = await fetch("http://localhost:5001/getdata");
+    // const fetchRanks = await url.json();
+    // setRanks(fetchRanks);
     setQuestions(null);
     setLoggedInUser(loggedInUser);
     navigate("/dashboard");
+    //this is the last setted state
   };
 
   return (
@@ -99,7 +111,7 @@ export default function Questions({
         <button
           type="button"
           onClick={handleSubmission}
-          class="btn btn-success btn-lg"
+          className="btn btn-success btn-lg"
         >
           Submit
         </button>

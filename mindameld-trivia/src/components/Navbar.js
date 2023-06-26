@@ -22,9 +22,10 @@ function Navbar({ loggedInUser, setLoggedInUser }) {
             MINDAMELD-TRIVIA
           </span>
           {loggedInUser && (
-            <span className="navbar-welcome" style={{ color: "#fff099" }}>
-              {`Welcome, `}
+            <span className="navbar-message" style={{ color: "#fff099" }}>
+              {`Welcome Test Your Knowledge Against the World:  `}
               {loggedInUser}
+              {` 👋`}
             </span>
           )}
         </div>

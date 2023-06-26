@@ -9,7 +9,7 @@ function Home({ loggedInUser, setLoggedInUser }) {
         <h1>
           It's time to <br /> questionnaire
         </h1>
-        <h4>Test your knowledge!{loggedInUser}</h4>
+        <h4>Test your knowledge!</h4>
       </div>
     </div>
   );

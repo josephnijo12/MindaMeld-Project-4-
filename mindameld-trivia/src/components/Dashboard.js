@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Dashboard.css";
 import Navbar from "./Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Ranks from "./Ranks";
 import Quiz from "./Quiz";
 
@@ -8,13 +9,13 @@ function Dashboard({ loggedInUser, setLoggedInUser }) {
   const [ranks, setRanks] = useState([]);
 
   const getRanks = async () => {
-    const url = await fetch("http://localhost:5000/getdata");
+    const url = await fetch("http://localhost:5001/getdata");
     const fetchRanks = await url.json();
     setRanks(fetchRanks);
   };
 
   useEffect(() => {
-    getRanks();
+    //getRanks();
   }, []);
 
   return (

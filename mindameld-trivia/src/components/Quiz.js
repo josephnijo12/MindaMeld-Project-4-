@@ -34,7 +34,7 @@ export default function Quiz({ loggedInUser, setLoggedInUser, setRanks }) {
             <h3>"Challenge your Mind, Master your Knowledge!"</h3>
             <button
               onClick={handleStartQuiz}
-              class="btn btn-outline-warning"
+              className="btn btn-outline-warning"
               style={{ margin: "5% 0 0 0" }}
             >
               P L A Y
