@@ -52,22 +52,22 @@ export default function Questions({
   };
 
   const handleSubmission = async () => {
-    let sendData = { score: score, name: loggedInUser };
-    fetch('https://649a246479fbe9bcf8404f40.mockapi.io/tasks', {
-  method: 'POST',
-  headers: {'content-type':'application/json'},
-  body: JSON.stringify(sendData)
-}).then(res => {
-  if (res.ok) {
-      return res.json();
-  }
-  // handle error
-}).then(task => {
-  // do something with the new task
-}).catch(error => {
-  
-  // handle error
-})
+    let sendData = { score: score, loggedInUser: loggedInUser };
+    fetch('https://649a246479fbe9bcf8404f40.mockapi.io/api/highscores', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(sendData)
+    }).then(res => {
+      if (res.ok) {
+        return res.json();
+      }
+      // handle error
+    }).then(task => {
+      // do something with the new task
+    }).catch(error => {
+
+      // handle error
+    })
     // fetch("http://localhost:5001/storedata", {
     //   method: "POST",
     //   headers: { "Content-Type": "application/json" },
