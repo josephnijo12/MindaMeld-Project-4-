@@ -25,7 +25,7 @@ function Navbar({ loggedInUser, setLoggedInUser }) {
             <span className="navbar-message" style={{ color: "#fff099" }}>
               {`Welcome Test Your Knowledge Against the World:  `}
               {loggedInUser}
-              {` 👋`}
+              
             </span>
           )}
         </div>

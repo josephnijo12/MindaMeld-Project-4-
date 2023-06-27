@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Ranks.css";
 
-export default function Ranks({ ranks }) {
-  const rankss = [
-  { name: "Avin", score: 230 },
-  { name: "Joseph", score: 210 },
-  { name: "Nijo", score: 200 },
-  { name: "Sandra", score: 180 },
-  { name: "Joel", score: 170 },
-  { name: "Remmie", score: 160 },
-  { name: "Jaymz", score: 160 },
-  { name: "Rahul", score: 150 },
-  { name: "Hemant", score: 150 },
-  { name: "Britt", score: 150 },
-];
+export default function Ranks({ }) {
+
+  const [leaderBoard, setLeaderBoard] = useState()
+  useEffect(() => {
+    const leaderBoardData = await fetchScoreData()
+  })
+  const fetchScoreData = async () => {
+    const res = await fetch('https://649a246479fbe9bcf8404f40.mockapi.io/api/highscores', {
+      method: 'GET',
+      headers: { 'content-type': 'application/json' },
+    })
+    const data = await res.json()
+    setLeaderBoard(data)
+    console.log(leaderBoard)
+  }
   return (
     <div
       className="text-center"
@@ -35,12 +37,12 @@ export default function Ranks({ ranks }) {
           <div className="rank-title rank-title2">Score</div>
         </div>
         <ol className="list-group list-group-numbered">
-          {rankss.map((obj) => (
-            <li className="list-group-item d-flex justify-content-between align-items-start no-border">
-              <div className="ms-2 me-auto">{obj.name.toUpperCase()}</div>
-              <span className="badge rounded-pill">{obj.score}</span>
+          {/* {leaderBoard.map((score) => (
+          <li className="list-group-item d-flex justify-content-between align-items-start no-border">
+            <div className="ms-2 me-auto">{score.name.toUpperCase()}</div>
+            <span className="badge rounded-pill">{obj.score}</span>
             </li>
-          ))}
+          ))} */}
         </ol>
       </div>
     </div>
