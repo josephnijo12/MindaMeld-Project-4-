@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Quiz.css";
 import Questions from "./Questions";
 
-export default function Quiz({ loggedInUser, setLoggedInUser  }) {
+export default function Quiz({ loggedInUser, setLoggedInUser }) {
   const [questions, setQuestions] = useState(null);
 
   const handleStartQuiz = async () => {

@@ -1,24 +1,33 @@
 .dashboard {
   background: white;
 }
-.border-style{
-  
+
+.border-style {
+
   /* border: 1px solid black ; */
-  height:900px;
+  height: 900px;
 
 }
-.custom{
+
+.custom {
   margin-top: 50px;
 }
-.top-rank{
-  
-    background: #fff099;
-    border-right-style:solid;
-    border-width: 6px;
-    border-color: #dabb0f;
-  
+
+.top-rank {
+
+  background: #fff099;
+  border-right-style: solid;
+  border-width: 6px;
+  border-color: #dabb0f;
+
 }
-.quiz-cat{
+
+.quiz-cat {
   background: #fff099;
 
+}
+
+.not-logged-in {
+  text-align: right;
+  font-weight: bold;
 }

@@ -7,10 +7,18 @@ import Questions from "./Questions";
 
 function Dashboard({ loggedInUser, setLoggedInUser }) {
 
+  // If logged in user does not exists then we want only show the nav bar and create div so the user knows he is not logged in and if they do exist then we are going to show the quiz which is the full dashboard
+  if (!loggedInUser) {
+    return (
+      <div>
+        <Navbar loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} />
+        <div className="not-logged-in">SIGN IN BY ENTERING!</div>
+      </div>
+    );
+  }
 
   return (
     <div>
-      <h1>WTHIS IS WOKRING</h1>
       <Navbar loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} />
       <section className="dashboard container-fluid">
         <div className="row border-style">

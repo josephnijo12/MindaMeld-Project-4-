@@ -19,17 +19,17 @@ function App() {
             />
           }
         />
-        {loggedInUser && (
-          <Route
-            path="/dashboard"
-            element={
-              <Dashboard
-                loggedInUser={loggedInUser}
-                setLoggedInUser={setLoggedInUser}
-              />
-            }
-          />
-        )}
+
+        <Route
+          path="/dashboard"
+          element={
+            <Dashboard
+              loggedInUser={loggedInUser}
+              setLoggedInUser={setLoggedInUser}
+            />
+          }
+        />
+
       </Routes>
     </div>
   );
