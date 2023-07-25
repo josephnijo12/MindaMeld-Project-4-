@@ -1,5 +1,5 @@
 # MindMeld Trivia App
-### [MindMeld Trivia App](mindameld.surge.sh)
+### [MindMeld Trivia App](https://mindameld.surge.sh)
 
 This project is basically, a trivia app, that allows the users to test their general knowledge against the work. To play this game all you need to do is create user name to sign in. This is important as this username will be how the world can see if your a top ten player. Furthermore, a question will be given and, which includes 4 options with one correct answer. It may also contain true or false questions. If the user selects the correct answer he be rewarded with 10 points. In total there are 25 questions in which the user can choose from. The user only has once chance to guess correctly. Once the user completes the quiz and and press sumbit,it is the end of the quiz and the user can playagain. If the user get a top ten score his username will be displayed in the top 10 leaderboard and will be forever rembered util he is beaten, by another user.
 ![HOME-PAGE](./Screenshot%202023-06-29%20at%209.03.32%20am.png)
